@@ -54,7 +54,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants sur v
     L'**API** sera accessible à l'adresse `http://127.0.0.1:5000`.
 
 ### **Frontend**
-1. Allez dans le répertoire du frontend (**frontend/**).
+1. Allez dans le répertoire du frontend (**src/frontend/**).
 2. Installez les dépendances :
     ```bash
     npm install

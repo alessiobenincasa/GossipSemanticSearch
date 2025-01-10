@@ -110,3 +110,4 @@ Effectuez vos modifications.
 Soumettez une Pull Request avec une description de vos changements.
 Auteurs
 Alessio Benincasa - Développeur principal et concepteur de ce moteur de recherche sémantique.
+

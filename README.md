@@ -37,12 +37,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants sur v
 
 ### **Backend**
 1. Clonez le repository.
-2. Allez dans le répertoire du backend (**backend/**).
-3. Créez un environnement virtuel (optionnel mais recommandé) :
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # Sur Windows utilisez `venv\Scripts\activate`
-    ```
+2. Allez dans le répertoire du backend (**src/backend/**).
 4. Installez les dépendances :
     ```bash
     pip install -r requirements.txt

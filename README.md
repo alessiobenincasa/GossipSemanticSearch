@@ -1,4 +1,4 @@
-# ** GOSSIP SEMANTIC SEARCH**
+# GOSSIP SEMANTIC SEARCH
 
 ## **Description**
 

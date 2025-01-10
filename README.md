@@ -42,11 +42,16 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants sur v
     ```bash
     pip install -r requirements.txt
     ```
-5. Téléchargez le modèle **Sentence-BERT** en exécutant :
-    ```bash
-    from sentence_transformers import SentenceTransformer
-    model = SentenceTransformer('all-MiniLM-L6-v2')
-    ```
+5. Importez les données et générez les embeddings avant de démarrer le backend. Exécutez les deux scripts suivants :
+
+- **Importation des données** :
+  ```bash
+  python import_data.py
+
+- **Génération des embeddings** :
+  ```bash
+  python generate_embeddings.py
+
 6. Lancez l'API **Flask** :
     ```bash
     python app.py

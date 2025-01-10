@@ -14,6 +14,28 @@ Ce projet implémente un moteur de recherche **sémantique** permettant de reche
 Le projet est divisé en deux parties principales :
 - **Backend (Flask)** : L'**API** qui gère le calcul des **embeddings** des articles et la recherche de **similarité**.
 - **Frontend (React)** : L'interface utilisateur qui permet à l'utilisateur de soumettre une requête et d'afficher les résultats de recherche.
+### Description des fichiers
+
+#### `import_data.py`
+
+Ce script récupère des articles à partir de deux flux RSS (VSD et Public) en utilisant la bibliothèque **feedparser**. Il extrait des informations clés comme le titre, le résumé, le lien, et la date de publication des articles. Une fois les articles récupérés, ils sont stockés sous forme de dictionnaires, combinés dans une liste, et sauvegardés dans un fichier CSV nommé **articles.csv**.
+
+Les étapes principales du script :
+1. **Récupération** des articles à partir de deux flux RSS (VSD et Public).
+2. **Création d'un DataFrame** avec les articles récupérés.
+3. **Sauvegarde** du DataFrame dans un fichier **articles.csv**.
+
+#### `generate_embeddings.py`
+
+Ce script utilise le modèle **all-MiniLM-L6-v2** de la bibliothèque **sentence-transformers** pour générer des embeddings à partir des résumés des articles présents dans le fichier **articles.csv**. Chaque résumé est encodé en un vecteur d'embeddings, qui est ensuite ajouté comme une nouvelle colonne dans le DataFrame. Le fichier modifié est sauvegardé sous le nom **articles_with_embeddings.csv**.
+
+Les étapes principales du script :
+1. **Chargement des articles** depuis **articles.csv**.
+2. **Génération des embeddings** des résumés des articles.
+3. **Sauvegarde** du DataFrame avec les embeddings dans **articles_with_embeddings.csv**.
+
+Ces deux fichiers sont nécessaires pour récupérer les articles à partir des flux RSS, puis générer et sauvegarder les embeddings pour chaque résumé.
+
 
 ## **Prérequis**
 Avant de commencer, assurez-vous d'avoir installé les éléments suivants sur votre machine :
